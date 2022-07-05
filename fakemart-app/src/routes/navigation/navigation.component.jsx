@@ -10,6 +10,7 @@ import {
   Button,
 } from "react-bootstrap";
 
+
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import { ReactComponent as MamasShoppingLogo } from "../../assets/MamasShopping.svg";
@@ -31,7 +32,7 @@ const Navigation = () => {
           <Navbar.Brand href="/">
             <img src={logo} width="50%" height="40%" alt="Fakemart" />
           </Navbar.Brand>
-          <Nav className="me-auto">
+          <Nav className="justify-content-end">
             <Nav.Link href="/shop">Shop</Nav.Link>
             <Nav.Link href="/sign-in">Sign-In</Nav.Link>
           </Nav>

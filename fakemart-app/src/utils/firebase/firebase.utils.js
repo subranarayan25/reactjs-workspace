@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-import {getAuth,GoogleAuthProvider,signInWithPopup } from "firebase/auth"
+import {getAuth,GoogleAuthProvider,signInWithPopup,signInWithRedirect } from "firebase/auth"
 
 //doc=get document instance
 import { getFirestore, doc, getDoc,setDoc} from "firebase/firestore"
@@ -28,6 +28,7 @@ googleProvider.setCustomParameters({
 
 export const auth=getAuth(firebaseApp)
 export const signInWithGooglePopup=()=>signInWithPopup(auth,googleProvider);
+export const signInWithGoogleRedirect=()=>signInWithRedirect(auth,googleProvider);
 
 //get an instance of firestore database which directly points to the console in google
 export const firestoreDB=getFirestore()
